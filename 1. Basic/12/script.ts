@@ -3,10 +3,13 @@
 // return double the absolute difference.
 
 function getDifference(num: number): number {
-  return Math.abs(13 - num);
+  if (num <= 13) {
+    return 13 - num;
+  }
+  return Math.abs(13 - num) * 2;
 }
 
 console.log(getDifference(431));
 console.log(getDifference(11));
-// 418
+// 836
 // 2
