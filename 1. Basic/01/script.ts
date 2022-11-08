@@ -12,10 +12,10 @@ function getDay(day: number): string {
   }
 }
 
-function test(): void {
+function getCurrentDay(): void {
   const date = new Date();
   console.log('Today is', getDay(date.getDay()));
   console.log(`Current time is ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
 }
 
-test();
+getCurrentDay();

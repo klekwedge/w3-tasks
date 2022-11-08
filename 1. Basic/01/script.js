@@ -12,9 +12,9 @@ function getDay(day) {
             return '';
     }
 }
-function test() {
+function getCurrentDay() {
     const date = new Date();
     console.log('Today is', getDay(date.getDay()));
     console.log(`Current time is ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 }
-test();
+getCurrentDay();
