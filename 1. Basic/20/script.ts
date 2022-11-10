@@ -3,7 +3,7 @@
 // characters. The string length must be greater than or equal to 1.
 
 function changePositionCharacters(str: string): string | null {
-  if (str.length < 1) {
+  if (str.length <= 1) {
     return null;
   }
 

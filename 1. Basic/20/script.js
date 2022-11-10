@@ -3,7 +3,7 @@
 // given string changing the position of first and last
 // characters. The string length must be greater than or equal to 1.
 function changePositionCharacters(str) {
-    if (str.length < 1) {
+    if (str.length <= 1) {
         return null;
     }
     const arr = str.split('');
