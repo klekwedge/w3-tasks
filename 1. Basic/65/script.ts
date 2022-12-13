@@ -2,10 +2,13 @@
 // and last n characters from a given sting. The string length must
 // be greater or equal to n.
 
-function testString(str: string, n: number = 5): string {
-  const newStr = str[0] +  str[str.length - 1];
+function testString(str: string, n: number = 2): string {
+  if (str.length < n) {
+    return str;
+  }
+  const newStr = str.slice(0, n) + str.slice(-n);
 
-  return newStr.repeat(n);
+  return newStr;
 }
 
 console.log(testString("P12$$21!P"));
@@ -14,8 +17,8 @@ console.log(testString("FF"));
 console.log(testString("P!PPP!P"));
 console.log(testString("P21121FcFF"));
 
-// PPPPPPPPPP
-// NtNtNtNtNt
-// FFFFFFFFFF
-// PPPPPPPPPP
-// PFPFPFPFPF
+// P1!P
+// Newt
+// FFFF
+// P!!P
+// P2FF
