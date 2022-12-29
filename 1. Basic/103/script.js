@@ -1,26 +1,21 @@
 "use strict";
-// Write a JavaScript program to find the number of inversions of a given
-// array of integers. Note: Two elements of the array a stored at positions
-// i and j form an inversion if a[i] > a[j] and i < j.
-function findNumberInversions(arr) {
-    let res = 0;
-    for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-        for (let j = i + 1; j < arr.length; j++) {
-            if (element > arr[j]) {
-                res++;
-            }
-        }
+// Write a JavaScript program to find the maximal number from a given
+// positive integer by deleting exactly one digit of the given number.
+function findMaximalNumberFromDeleting(num) {
+    const str = String(num);
+    const res = [];
+    for (let i = 0; i < str.length; i++) {
+        res.push(str.slice(0, i) + str.slice(i + 1));
     }
-    return res;
+    return Math.max(...res.map(i => +i));
 }
-console.log(findNumberInversions([1, 2, 3, 2, 1, 2, 3, 3, 3, 2]));
-console.log(findNumberInversions([1, 18, 2, 3, 18, 9, 1, 18, 4, 5]));
-console.log(findNumberInversions([13, 2, 3, 13, 13, 8, 9]));
-console.log(findNumberInversions([100, 25, 25, 4, 25]));
-console.log(findNumberInversions([100, 25, 25, 100]));
-// 9
-// 17
-// 8
-// 6
-// 2
+console.log(findMaximalNumberFromDeleting(100));
+console.log(findMaximalNumberFromDeleting(10));
+console.log(findMaximalNumberFromDeleting(1245));
+console.log(findMaximalNumberFromDeleting(2112));
+console.log(findMaximalNumberFromDeleting(521));
+// 10
+// 1
+// 245
+// 212
+// 52
