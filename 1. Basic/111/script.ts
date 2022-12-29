@@ -1,5 +1,5 @@
-// Write a JavaScript program to find the number of even values in sequence
-// before the first occurrence of a given number.
+// Write a JavaScript program to check a number from three given numbers where
+// two numbers are equal, find the third one.
 
 function checkNumber(a: number, b: number, c: number) {
   if (a === b) {
