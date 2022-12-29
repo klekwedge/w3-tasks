@@ -1,43 +1,34 @@
-// Write a JavaScript program to find the number which appears
-// most in a given array of integers.
+// Write a JavaScript program to find the maximum possible
+// sum of some of its k consecutive numbers (numbers that
+// follow each other in order.) of a given array of positive integers.
 
-interface INumberObj {
-  [index: number]: number;
-}
-
-function findGreaterConformity(arr: number[]): number[] {
-  let obj: INumberObj = {};
+function maxConsecutiveSum(arr: number[], k: number): number {
+  const sums = [];
 
   for (let i = 0; i < arr.length; i++) {
-    const el = arr[i];
-    if (obj[el]) {
-      obj[el]++;
-    } else {
-      obj[el] = 1;
+    let sum = 0;
+
+    if (i + k > arr.length) {
+      break;
     }
+
+    for (let j = i; j < i + k; j++) {
+      sum += arr[j];
+    }
+    sums.push(sum);
   }
 
-  let num = "";
-  let maxRepeats = 0;
-
-  Object.entries(obj).forEach((item) => {
-    if (maxRepeats < item[1]) {
-      num = item[0];
-      maxRepeats = item[1];
-    }
-  });
-
-  return [+num, maxRepeats];
+  return Math.max(...sums);
 }
 
-console.log(findGreaterConformity([1, 2, 3, 8, 9, 3, 2, 1, 2, 3, 3, 3, 2]));
-console.log(findGreaterConformity([1, 18, 2, 3, 18, 9, 1, 18, 4, 5]));
-console.log(findGreaterConformity([13, 2, 3, 13, 13, 8, 9]));
-console.log(findGreaterConformity([100, 25, 25, 4.0, 25]));
-console.log(findGreaterConformity([100, 25, 25, 100]));
+console.log(maxConsecutiveSum([1, 2, 3, 14, 5], 2));
+console.log(maxConsecutiveSum([2, 3, 5, 1, 6], 3));
+console.log(maxConsecutiveSum([9, 3, 5, 1, 7], 2));
+console.log(maxConsecutiveSum([100, 25, 4.0], 2));
+console.log(maxConsecutiveSum([100, 25, 25], 1));
 
-// [ 3, 5 ]
-// [ 18, 3 ]
-// [ 13, 3 ]
-// [ 25, 3 ]
-// [ 25, 2 ]
+// 19
+// 12
+// 12
+// 125
+// 100

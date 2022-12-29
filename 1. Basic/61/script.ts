@@ -1,19 +1,18 @@
 // Write a JavaScript program to concatenate two strings
-// and return the result. If the length of the strings are
-// not same then remove the characters from the longer string.
+// except their first character.
 
 function createNewString(a: string, b: string): string {
-  return a.length > b.length ? a.slice(0, b.length) + b : a + b.slice(0, a.length);
+  return a.slice(1) + b.slice(1);
 }
 
-console.log(createNewString("abcff", "adc2c"));
-console.log(createNewString("tovntv5nrhyrtew", "adc2c"));
-console.log(createNewString("tovntv5nrhyrtew", "fetwmcotfft"));
-console.log(createNewString("test5", "tovntv5nrhyrtew"));
-console.log(createNewString("t65e4johb453vest5", "test5"));
+console.log(createNewString('gfcnngndmm', 'fbn'));
+console.log(createNewString('adc2', 'ybvcgb'));
+console.log(createNewString('ffft', 'hgfbh'));
+console.log(createNewString('op6opo', 'jjvff'));
+console.log(createNewString('test', 'plknbg'));
 
-// abcffadc2c
-// tovntadc2c
-// tovntv5nrhyfetwmcotfft
-// test5tovnt
-// t65e4test5
+// fcnngndmmbn
+// dc2bvcgb
+// fftgfbh
+// p6opojvff
+// estlknbg

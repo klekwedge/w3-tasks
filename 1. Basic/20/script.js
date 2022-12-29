@@ -1,18 +1,14 @@
 "use strict";
-// Write a JavaScript program to create a new string from a
-// given string changing the position of first and last
-// characters. The string length must be greater than or equal to 1.
-function changePositionCharacters(str) {
-    if (str.length <= 1) {
-        return null;
-    }
-    const arr = str.split('');
-    [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
-    return arr.join('');
+// Write a JavaScript program to check from two given integers,
+// whether one is positive and another one is negative
+function checkNums(a, b) {
+    return (a >= 0 && b < 0) || (a < 0 && b >= 0);
 }
-console.log(changePositionCharacters('Hello'));
-console.log(changePositionCharacters('Look'));
-console.log(changePositionCharacters('Python'));
-// oellH
-// kooL
-// nythoP
+console.log(checkNums(-20, 1));
+console.log(checkNums(-1, 20));
+console.log(checkNums(-1, -2));
+console.log(checkNums(0, 0));
+// true
+// true
+// false
+// false

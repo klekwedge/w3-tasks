@@ -1,18 +1,6 @@
 "use strict";
-// Write a JavaScript program to get the current date.
-// Expected Output :
-// mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
-function getCurrentDate() {
-    const date = new Date();
-    let day = date.getDate();
-    day = day < 10 ? `0${day}` : day;
-    console.log(`Current date is ${day}-${date.getMonth() + 1}-${date.getFullYear()}`);
-    console.log(`Current date is ${day}/${date.getMonth() + 1}/${date.getFullYear()}`);
-    console.log(`Current date is ${date.getMonth() + 1}-${day}-${date.getFullYear()}`);
-    console.log(`Current date is ${date.getMonth() + 1}/${day}/${date.getFullYear()}`);
+// Write a JavaScript program to print the contents of the current window.
+function printCurrentPage() {
+    // window.print();
 }
-getCurrentDate();
-// Current date is 07-11-2022
-// Current date is 07/11/2022
-// Current date is 11-07-2022
-// Current date is 11/07/2022
+printCurrentPage();

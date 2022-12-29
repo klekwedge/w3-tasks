@@ -1,28 +1,18 @@
-// Write a JavaScript program to divide two positive numbers and
-// return a string with properly formatted commas
+// Write a JavaScript program to check whether the characters a and
+// b are separated by exactly 3 places anywhere (at least once) in a given string.
 
-function divideNumbers(a: number, b: number): string[] {
-  let div = Math.round(a / b).toString(),
-    result_array = div.split('');
-
-  if ( Math.round(a / b) >= 1000) {
-    for (let i = div.length - 3; i > 0; i -= 3) {
-      result_array.splice(i, 0, ',');
-    }
-    result_array;
-  }
-
-  return result_array;
+function convertLetters(str: string): boolean {
+  return /a...b/.test(str) || /b...a/.test(str);
 }
 
-console.log(divideNumbers(1, 5));
-console.log(divideNumbers(53, 5));
-console.log(divideNumbers(876543, 654));
-console.log(divideNumbers(87654, 311));
-console.log(divideNumbers(85078, 12));
+console.log(convertLetters('af21b'));
+console.log(convertLetters('fkvlclaggggggggbrorpdkmcmcx'));
+console.log(convertLetters('vrlea---blwkrkwca---bmdmwcdw'));
+console.log(convertLetters('fkelwcafffbfvmevrm'));
+console.log(convertLetters('gkldlcmfkrd'));
 
-// [ '0' ]
-// [ '1', '1' ]
-// [ '1', ',', '3', '4', '0' ]
-// [ '2', '8', '2' ]
-// [ '7', ',', '0', '9', '0' ]
+// true
+// false
+// true
+// true
+// false

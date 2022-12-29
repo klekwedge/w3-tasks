@@ -1,14 +1,15 @@
-// Write a JavaScript program to remove a character at
-// the specified position of a given string and return the new string.
+// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400
 
-function removeCharacter(str: string, index: number): string {
-  return str.slice(0, index) + str.slice(index + 1);
+function checkNum(num: number): boolean {
+  return (num >= 20 && num <= 100) || num === 400;
 }
 
-console.log(removeCharacter('test', 3));
-console.log(removeCharacter('Example', 5));
-console.log(removeCharacter('Python', 2));
+console.log(checkNum(400));
+console.log(checkNum(21));
+console.log(checkNum(5));
+console.log(checkNum(3));
 
-// tes
-// Exampe
-// Pyhon
+// true
+// true 
+// false
+// false

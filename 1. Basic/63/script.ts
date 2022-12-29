@@ -1,22 +1,25 @@
-// Write a JavaScript program to display the city name if the string
-// begins with "Los" or "New" otherwise return blank
+// Write a JavaScript program to create a string using the middle three
+// characters of a given string of odd length. The string length
+// must be greater or equal to three.
 
-function testString(str: string): boolean {
-  if (str.length < 3) {
-    return false;
+function createNewString(str: string): string {
+  if (str.length < 3 || str.length % 2 === 0) {
+    return str;
   }
 
-  return /^[Los|New]/g.test(str)
+  const middle = Math.floor(str.length / 2);
+
+  return str.slice(middle - 1, middle + 2);
 }
 
-console.log(testString("Losabcff"));
-console.log(testString("Newtovntv5nrhyrtew"));
-console.log(testString("ScrLosipttovntvNew5nrhyrtew"));
-console.log(testString("tNeweScriptst5"));
-console.log(testString("tLos"));
+console.log(createNewString('abcff'));
+console.log(createNewString('adc2c'));
+console.log(createNewString('fetwmcotfft'));
+console.log(createNewString('tovntv5nrhyrtew'));
+console.log(createNewString('test5'));
 
-// true
-// true
-// false
-// false
-// false
+// bcf
+// dc2
+// mco
+// 5nr
+// est

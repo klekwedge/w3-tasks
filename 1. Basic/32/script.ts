@@ -1,16 +1,16 @@
-// Write a program to check whether a specified character
-// exists within the 2nd to 4th position in a given string.
+// Write a JavaScript program to find a value which is nearest
+// to 100 from two different given integer values.
 
-function findCharacter(str: string, char: string): boolean {
-  return str.slice(1, 4).includes(char);
+function findNearestValue(a: number, b: number): number {
+  return Math.abs(100 - a) > Math.abs(100 - b) ? b : a;
 }
 
-console.log(findCharacter('Hello', 'e'));
-console.log(findCharacter('Hello', 'l'));
-console.log(findCharacter('Hello', 'H'));
-console.log(findCharacter('Hello', 'o'));
+console.log(findNearestValue(1, 6));
+console.log(findNearestValue(5341, 22));
+console.log(findNearestValue(1, 1));
+console.log(findNearestValue(100, 99));
 
-// true
-// true
-// false
-// false
+// 6
+// 22
+// 1
+// 100

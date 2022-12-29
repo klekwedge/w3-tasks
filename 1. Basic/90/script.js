@@ -1,25 +1,16 @@
 "use strict";
-// Write a JavaScript program to find the maximal
-// difference among all possible pairs of a given array of integers
-function maximalDifference(arr) {
-    let max = 0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j !== i && j < arr.length; j++) {
-            const difference = Math.abs(arr[i] - arr[j]);
-            if (difference > max) {
-                max = difference;
-            }
-        }
-    }
-    return max;
+// Write a JavaScript program to find the kth greatest element of a given array of integers
+function kthGreatest(arr, k) {
+    arr.sort((a, b) => b - a);
+    return arr[k - 1];
 }
-console.log(maximalDifference([1, 2, 3, 8, 9]));
-console.log(maximalDifference([1, 2, 3, 18, 9]));
-console.log(maximalDifference([13, 2, 3, 8, 9]));
-console.log(maximalDifference([100, 25, 4.0]));
-console.log(maximalDifference([100, 25, 25]));
-// 8
-// 17
-// 11
-// 96
-// 75
+console.log(kthGreatest([10, 25, 35], 2));
+console.log(kthGreatest([10, 25, 250], 3));
+console.log(kthGreatest([30, 25, 5], 5));
+console.log(kthGreatest([100, 25, 4.0], 2));
+console.log(kthGreatest([100, 25, 25], 1));
+// 25
+// 10
+// undefined
+// 25
+// 100

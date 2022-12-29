@@ -1,11 +1,19 @@
-// Write a JavaScript program to determine whether a given year
-// is a leap year in the Gregorian calendar
+// Write a JavaScript program to rotate the string 'w3resource'
+// in right direction by periodically removing one letter from
+// the end of the string and attaching it to the front.
 
-function isLeapYear(): void {
-  const year = new Date().getFullYear();
-  console.log((year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0));
+function rotateStr(): void {
+  const str = 'w3resource';
+  let strArr = str.split('')
+  let res = '';
+
+  for (let i = 0; i < str.length; i++) {
+    res += strArr.pop();
+  }
+
+  console.log(`Res: ${res}`)
 }
 
-isLeapYear();
+rotateStr();
 
-// false
+// Res: ecruoser3w

@@ -1,20 +1,14 @@
 "use strict";
-// Write a JavaScript program to check the total marks of
-// a student in various examinations. The student will
-// get A+ grade if the total marks are in the range
-// 89..100 inclusive, if the examination is "Final-exam."
-// the student will get A+ grade and total marks must be
-// greater than or equal to 90. Return true if the student
-// get A+ grade or false otherwise.
-function examStatus(totalMarks, isExam = false) {
-    if (isExam) {
-        return totalMarks >= 90;
-    }
-    return totalMarks >= 89 && totalMarks <= 100;
+// Write a program to check whether a specified character
+// exists within the 2nd to 4th position in a given string.
+function findCharacter(str, char) {
+    return str.slice(1, 4).includes(char);
 }
-console.log(examStatus(78));
-console.log(examStatus(89, true));
-console.log(examStatus(99, true));
-// false
-// false
+console.log(findCharacter('Hello', 'e'));
+console.log(findCharacter('Hello', 'l'));
+console.log(findCharacter('Hello', 'H'));
+console.log(findCharacter('Hello', 'o'));
 // true
+// true
+// false
+// false

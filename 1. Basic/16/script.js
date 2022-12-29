@@ -1,13 +1,13 @@
 "use strict";
-// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400
-function checkNum(num) {
-    return (num >= 20 && num <= 100) || num === 400;
+// Write a JavaScript program to compute the sum of the two
+// given integers. If the two values are same, then returns triple their sum.
+function getSum(a, b) {
+    if (a === b) {
+        return (a + b) * 3;
+    }
+    return a + b;
 }
-console.log(checkNum(400));
-console.log(checkNum(21));
-console.log(checkNum(5));
-console.log(checkNum(3));
-// true
-// true 
-// false
-// false
+console.log(getSum(11, 11));
+console.log(getSum(5, 11));
+// 418
+// 2

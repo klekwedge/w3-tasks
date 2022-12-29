@@ -1,19 +1,19 @@
-// Write a JavaScript program to create a new string from a given string,
-// removing the first and last characters of the string if the first or last
-// character are 'P'. Return the original string if the condition is not satisfied.
+// Write a JavaScript program to concatenate two strings
+// and return the result. If the length of the strings are
+// not same then remove the characters from the longer string.
 
-function testString(str: string): string {
-  return /^P.*P$/g.test(str) ? str.replace(/^P|P$/g, "") : str;
+function createNewString(a: string, b: string): string {
+  return a.length > b.length ? a.slice(0, b.length) + b : a + b.slice(0, a.length);
 }
 
-console.log(testString("P12$$21!P"));
-console.log(testString("Newt"));
-console.log(testString("FF"));
-console.log(testString("P!PPP!P"));
-console.log(testString("P21121FcFF"));
+console.log(createNewString("abcff", "adc2c"));
+console.log(createNewString("tovntv5nrhyrtew", "adc2c"));
+console.log(createNewString("tovntv5nrhyrtew", "fetwmcotfft"));
+console.log(createNewString("test5", "tovntv5nrhyrtew"));
+console.log(createNewString("t65e4johb453vest5", "test5"));
 
-// 12$$21!
-// Newt
-// FF
-// !PPP!
-// P21121FcFF
+// abcffadc2c
+// tovntadc2c
+// tovntv5nrhyfetwmcotfft
+// test5tovnt
+// t65e4test5

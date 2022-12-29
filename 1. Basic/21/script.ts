@@ -1,16 +1,19 @@
-// Write a JavaScript program to create a new string from a given
-// string with the first character of the given string added at the front and back.
+// Write a JavaScript program to create a new string adding "Py"
+// in front of a given string. If the given string begins with
+// "Py" then return the original string.
 
 function createNewString(str: string): string {
-  const firstLetter = str[0];
+  if (str.slice(0, 2) === 'Py') {
+    return str;
+  }
 
-  return firstLetter + str + firstLetter;
+  return 'Py' + str;
 }
 
-console.log(createNewString('Hello'));
-console.log(createNewString('Look'));
+console.log(createNewString('test'));
+console.log(createNewString('Example'));
 console.log(createNewString('Python'));
 
-// HHelloH
-// LLookL
-// PPythonP
+// Pytest
+// PyExample
+// Python

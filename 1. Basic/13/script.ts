@@ -1,14 +1,15 @@
-// Write a JavaScript program to compute the sum of the two
-// given integers. If the two values are same, then returns triple their sum.
+// Write a JavaScript exercise to create a variable using a user-defined name
 
-function getSum(a: number, b: number): number {
-  if (a === b) {
-    return (a + b) * 3;
-  }
-  return a + b;
+interface IObj {
+  name: string;
+  year: number;
 }
 
-console.log(getSum(11, 11));
-console.log(getSum(5, 11));
-// 66
-// 16
+const obj: IObj = {
+  name: "abcd",
+  year: 30,
+};
+
+console.log(obj);
+
+// { name: 'abcd', year: 30 }

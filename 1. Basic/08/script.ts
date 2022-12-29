@@ -1,15 +1,22 @@
-// Write a JavaScript program to calculate days left until next Christmas.
+// Write a JavaScript program where the program takes a random
+// integer between 1 to 10, the user is then prompted to input a
+// guess number. If the user input matches with guess number,
+// the program will display a message "Good Work" otherwise display a
+// message "Not matched".
 
-function countDaysUntilChristmas(): void {
-  const currentYear = new Date();
-  const nextYear = new Date(currentYear.getFullYear() + 1, 0, 1);
-
-  console.log(
-    Math.floor((+nextYear - +currentYear) / (1000 * 60 * 60 * 24)) +
-      ' days left until Christmas!'
-  );
+function isRandomNumbersMatch(): void {
+  const randomNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+  const randomUserNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+  console.log(`randomNum: ${randomNum}`, `randomUserNum: ${randomUserNum}`);
+  if (randomNum === randomUserNum) {
+    console.log("Good Work");
+  }
+  else {
+    console.log("Not matched");
+  }
 }
 
-countDaysUntilChristmas();
+isRandomNumbersMatch();
 
-// 54 days left until Christmas!
+// randomNum: 9 randomUserNum: 4
+// Not matched

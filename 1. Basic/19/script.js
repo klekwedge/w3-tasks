@@ -1,12 +1,13 @@
 "use strict";
-// Write a JavaScript program to remove a character at
-// the specified position of a given string and return the new string.
-function removeCharacter(str, index) {
-    return str.slice(0, index) + str.slice(index + 1);
+// Write a JavaScript program to check whether a given integer is within 20 of 100 or 400
+function checkNum(num) {
+    return (num >= 20 && num <= 100) || num === 400;
 }
-console.log(removeCharacter('test', 3));
-console.log(removeCharacter('Example', 5));
-console.log(removeCharacter('Python', 2));
-// tes
-// Exampe
-// Pyhon
+console.log(checkNum(400));
+console.log(checkNum(21));
+console.log(checkNum(5));
+console.log(checkNum(3));
+// true
+// true 
+// false
+// false

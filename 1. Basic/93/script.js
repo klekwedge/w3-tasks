@@ -1,20 +1,25 @@
 "use strict";
-// Write a JavaScript program to compute the sum of absolute
-// differences of consecutive numbers of a given array of integers.
-function computeSumAbsoluteDifferences(arr) {
-    let res = 0;
-    for (let i = 0; i < arr.length - 1; i++) {
-        res += Math.abs(arr[i] - arr[i + 1]);
+// Write a JavaScript program to find the maximal
+// difference among all possible pairs of a given array of integers
+function maximalDifference(arr) {
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j !== i && j < arr.length; j++) {
+            const difference = Math.abs(arr[i] - arr[j]);
+            if (difference > max) {
+                max = difference;
+            }
+        }
     }
-    return res;
+    return max;
 }
-console.log(computeSumAbsoluteDifferences([1, 2, 3, 2, 1, 2, 3, 3, 3, 2]));
-console.log(computeSumAbsoluteDifferences([1, 18, 2, 3, 18, 9, 1, 18, 4, 5]));
-console.log(computeSumAbsoluteDifferences([13, 2, 3, 13, 13, 8, 9]));
-console.log(computeSumAbsoluteDifferences([1, 2, 3, 2, -5]));
-console.log(computeSumAbsoluteDifferences([100, 25, 25, 100]));
-// 7
-// 98
-// 28
-// 10
-// 150
+console.log(maximalDifference([1, 2, 3, 8, 9]));
+console.log(maximalDifference([1, 2, 3, 18, 9]));
+console.log(maximalDifference([13, 2, 3, 8, 9]));
+console.log(maximalDifference([100, 25, 4.0]));
+console.log(maximalDifference([100, 25, 25]));
+// 8
+// 17
+// 11
+// 96
+// 75

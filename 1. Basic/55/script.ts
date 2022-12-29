@@ -1,23 +1,18 @@
-// Write a JavaScript program to create a new string of 4 copies
-// of the last 3 characters of a given original string. The length
-// of the given string must be 3 and above.
+// Write a JavaScript program to check whether a given string
+// contains equal number of p's and t's
 
-function copyString(str: string): string {
-  if (str.length < 3) {
-    return '';
-  }
-
-  return str.slice(-3).repeat(4);
+function convertLetters(str: string): boolean {
+  return str.match(/p/gi)?.length === str.match(/t/gi)?.length;
 }
 
-console.log(copyString('gfcnngndmm'));
-console.log(copyString('adc'));
-console.log(copyString('fff'));
-console.log(copyString('opopo'));
-console.log(copyString('test'));
+console.log(convertLetters('ptptpt'));
+console.log(convertLetters('ppppppppttttttttttttttt'));
+console.log(convertLetters('123'));
+console.log(convertLetters('ptptpptptpt'));
+console.log(convertLetters('ptptptptptpptptptptttt'));
 
-// dmmdmmdmmdmm
-// adcadcadcadc
-// ffffffffffff
-// opoopoopoopo
-// estestestest
+// true
+// false
+// true
+// false
+// false

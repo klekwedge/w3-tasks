@@ -1,16 +1,19 @@
 "use strict";
-// Write a JavaScript program to compute the sum of three
-// elements of a given array of integers of length 3
-function calcSum(arr) {
-    return arr.reduce((prev, next) => prev + next);
+// Write a JavaScript program to display the city name if the string
+// begins with "Los" or "New" otherwise return blank
+function testString(str) {
+    if (str.length < 3) {
+        return false;
+    }
+    return /^[Los|New]/g.test(str);
 }
-console.log(calcSum([1, 5, 6]));
-console.log(calcSum([16, 1, 1]));
-console.log(calcSum([0, 0, 0]));
-console.log(calcSum([0, 2, 3]));
-console.log(calcSum([6, 1, 6]));
-// 12
-// 18
-// 0
-// 5
-// 13
+console.log(testString("Losabcff"));
+console.log(testString("Newtovntv5nrhyrtew"));
+console.log(testString("ScrLosipttovntvNew5nrhyrtew"));
+console.log(testString("tNeweScriptst5"));
+console.log(testString("tLos"));
+// true
+// true
+// false
+// false
+// false

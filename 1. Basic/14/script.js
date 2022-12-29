@@ -1,13 +1,8 @@
 "use strict";
-// Write a JavaScript program to compute the sum of the two
-// given integers. If the two values are same, then returns triple their sum.
-function getDifference(num) {
-    if (num <= 19) {
-        return 19 - num;
-    }
-    return Math.abs(19 - num) * 3;
+// Write a JavaScript exercise to get the extension of a filename.
+function getExtension(str) {
+    return str.split('.').pop();
 }
-console.log(getDifference(20));
-console.log(getDifference(19));
-// 54
-// 0
+console.log(getExtension('script.js'));
+// 140°F
+// 7.222222222222222°C

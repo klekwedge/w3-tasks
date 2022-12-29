@@ -1,18 +1,18 @@
-// Write a JavaScript program to check whether a given string
-// contains equal number of p's and t's
+// Write a JavaScript program to convert the letters of a given
+// string in alphabetical order.
 
-function convertLetters(str: string): boolean {
-  return str.match(/p/gi)?.length === str.match(/t/gi)?.length;
+function convertLetters(str: string): string {
+  return str.split('').sort().join('')
 }
 
-console.log(convertLetters('ptptpt'));
-console.log(convertLetters('ppppppppttttttttttttttt'));
-console.log(convertLetters('123'));
-console.log(convertLetters('ptptpptptpt'));
-console.log(convertLetters('ptptptptptpptptptptttt'));
+console.log(convertLetters('Fcewvwwqefvw'));
+console.log(convertLetters('fkvlclrorpdkmcmcx'));
+console.log(convertLetters('vrlelwkrkwcmdmwcdw'));
+console.log(convertLetters('fkelwcfvmevrm'));
+console.log(convertLetters('gkldlcmfkrd'));
 
-// true
-// false
-// true
-// false
-// false
+// Fceefqvvwwww
+// cccdfkkllmmoprrvx
+// ccddekkllmmrrvwwww
+// ceeffklmmrvvw
+// cddfgkkllmr

@@ -1,23 +1,13 @@
-// Write a JavaScript program to find the larger number
-// from the two given positive integers, the two numbers
-// are in the range 40..60 inclusive.
+// Write a JavaScript program to find the largest of three given integers.
 
-function findLargerNumber(a: number, b: number): number | null {
-  if (a >= 40 && a <= 60 && b >= 40 && b <= 60) {
-    return a > b ? a : b;
-  } else {
-    return null;
-  }
+function findLargestNum(a: number, b: number, c: number): number {
+  return Math.max(a, b, c);
 }
 
-console.log(findLargerNumber(1, 6));
-console.log(findLargerNumber(5341, 22));
-console.log(findLargerNumber(1, 1));
-console.log(findLargerNumber(100, 99));
-console.log(findLargerNumber(44, 55));
+console.log(findLargestNum(1, 6, 7));
+console.log(findLargestNum(5341, 22, 4));
+console.log(findLargestNum(1, 1, 1));
 
-// null
-// null
-// null
-// null
-// 55
+// 7
+// 5341
+// 1

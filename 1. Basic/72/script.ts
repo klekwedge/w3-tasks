@@ -1,18 +1,21 @@
-// Write a JavaScript program to create a new array taking the
-// middle elements of the two arrays of integer and each length 3.
+// Write a JavaScript program to check whether the first and last
+// elements are equal of a given array of integers length 3.
 
-function createNewArray(arr1: number[], arr2: number[]): number[] {
-  return [arr1[Math.floor(arr1.length / 2)], arr2[Math.floor(arr2.length / 2)]];
+function compareArrayElements(arr: number[]): boolean {
+  if (arr.length < 1) {
+    return false;
+  }
+  return arr[0] === arr[arr.length - 1];
 }
 
-console.log(createNewArray([1, 5, 6], [1, 0, 6]));
-console.log(createNewArray([16, 1, 3], [1, 95, 6]));
-console.log(createNewArray([1, 0, 1], [1, 7, 6]));
-console.log(createNewArray([0, 2, 3], [1, 4, 6]));
-console.log(createNewArray([6, 1, 6], [1, 2, 6]));
+console.log(compareArrayElements([1, 5, 6]));
+console.log(compareArrayElements([16, 1, 3]));
+console.log(compareArrayElements([1, 0, 1]));
+console.log(compareArrayElements([0, 2, 3]));
+console.log(compareArrayElements([6, 1, 6]));
 
-// [ 5, 0 ]
-// [ 1, 95 ]
-// [ 0, 7 ]
-// [ 2, 4 ]
-// [ 1, 2 ]
+// false
+// false
+// true
+// false
+// true

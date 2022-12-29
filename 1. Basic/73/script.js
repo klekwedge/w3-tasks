@@ -1,20 +1,19 @@
 "use strict";
-// Write a JavaScript program to create a new array taking
-// the first and last elements from a given array of
-// integers and length must be greater or equal to 1.
-function createNewArray(arr) {
+// Write a JavaScript program to reverse the
+// elements of a given array of integers length 3.
+function reverseElements(arr) {
     if (arr.length < 1) {
         return [];
     }
-    return [arr[0], arr[arr.length - 1]];
+    return [arr[2], arr[1], arr[0]];
 }
-console.log(createNewArray([1, 5, 6]));
-console.log(createNewArray([16, 1, 3]));
-console.log(createNewArray([1, 0, 1]));
-console.log(createNewArray([0, 2, 3]));
-console.log(createNewArray([6, 1, 6]));
-// [ 1, 6 ]
-// [ 16, 3 ]
-// [ 1, 1 ]
-// [ 0, 3 ]
-// [ 6, 6 ]
+console.log(reverseElements([1, 5, 6]));
+console.log(reverseElements([16, 1, 3]));
+console.log(reverseElements([1, 0, 1]));
+console.log(reverseElements([0, 2, 3]));
+console.log(reverseElements([6, 1, 6]));
+// [ 6, 5, 1 ]
+// [ 3, 1, 16 ]
+// [ 1, 0, 1 ]
+// [ 3, 2, 0 ]
+// [ 6, 1, 6 ]

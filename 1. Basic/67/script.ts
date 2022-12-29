@@ -1,18 +1,19 @@
-// Write a JavaScript program to rotate the elements
-// left of a given array of integers of length 3
+// Write a JavaScript program to create a new string from a given string,
+// removing the first and last characters of the string if the first or last
+// character are 'P'. Return the original string if the condition is not satisfied.
 
-function rotateElements(arr: number[]): number[] {
-  return [arr[1], arr[2], arr[0]];
+function testString(str: string): string {
+  return /^P.*P$/g.test(str) ? str.replace(/^P|P$/g, "") : str;
 }
 
-console.log(rotateElements([1, 5, 6]));
-console.log(rotateElements([16, 1, 1]));
-console.log(rotateElements([0, 0, 0]));
-console.log(rotateElements([0, 2, 3]));
-console.log(rotateElements([6, 1, 6]));
+console.log(testString("P12$$21!P"));
+console.log(testString("Newt"));
+console.log(testString("FF"));
+console.log(testString("P!PPP!P"));
+console.log(testString("P21121FcFF"));
 
-// [ 5, 6, 1 ]
-// [ 1, 1, 16 ]
-// [ 0, 0, 0 ]
-// [ 2, 3, 0 ]
-// [ 1, 6, 6 ]
+// 12$$21!
+// Newt
+// FF
+// !PPP!
+// P21121FcFF

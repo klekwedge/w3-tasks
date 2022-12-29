@@ -1,17 +1,18 @@
-// Write a JavaScript program to compute the sum of the two given
-// integers, If the sum is in the range 50..80 return 65 other
-// wise return 80.
+// Write a JavaScript program to check whether the last digit
+// of the three given positive integers is same.
 
-function computeSum(a: number, b: number): number {
-  return a + b >= 50 && a + b <= 80 ? 65 : 80
+function checkLastDigit(a: number, b: number, c: number): boolean {
+  return a % 10 == b % 10 && a % 10 == c % 10 && b % 10 == c % 10;
 }
 
-console.log(computeSum(78, 5));
-console.log(computeSum(89, 21));
-console.log(computeSum(99, 3));
-console.log(computeSum(9, 65));
+console.log(checkLastDigit(123, 123, 3));
+console.log(checkLastDigit(123, 121, 1));
+console.log(checkLastDigit(2123, 123, 3));
+console.log(checkLastDigit(22, 22, 444424122));
+console.log(checkLastDigit(5213422, 422, 654357652));
 
-// 80
-// 80
-// 80
-// 65
+// true
+// false
+// true
+// true
+// true

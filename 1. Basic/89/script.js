@@ -1,20 +1,21 @@
 "use strict";
-// Write a JavaScript program to find the maximal difference
-// between any two adjacent elements of a given array of integers.
-function maxDifference(arr) {
-    const differences = [];
-    for (let i = 0; i < arr.length - 1; i++) {
-        differences.push(Math.abs(arr[i] - arr[i + 1]));
-    }
-    return Math.max(...differences);
+// Write a JavaScript program to check whether it is possible to replace
+// $ in a given expression x $ y = z with one of the four signs +, -, * or /
+// to obtain a correct expression.
+// For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
+function isTrueEquality(num1, num2, num3) {
+    return (num1 + num2 === num3 ||
+        num1 - num2 === num3 ||
+        num1 / num2 === num3 ||
+        num1 * num2 === num3);
 }
-console.log(maxDifference([1, 2, 3, 8, 9]));
-console.log(maxDifference([1, 2, 3, 18, 9]));
-console.log(maxDifference([13, 2, 3, 8, 9]));
-console.log(maxDifference([100, 25, 4.0]));
-console.log(maxDifference([100, 25, 25]));
-// 5
-// 15
-// 11
-// 75
-// 75
+console.log(isTrueEquality(10, 25, 35));
+console.log(isTrueEquality(10, 25, 250));
+console.log(isTrueEquality(30, 25, 5));
+console.log(isTrueEquality(100, 25, 4.0));
+console.log(isTrueEquality(100, 25, 25));
+// true
+// true
+// true
+// true
+// false

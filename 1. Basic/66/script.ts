@@ -1,18 +1,22 @@
-// Write a JavaScript program to compute the sum of three
-// elements of a given array of integers of length 3
+// Write a JavaScript program to display the city name if the string
+// begins with "Los" or "New" otherwise return blank
 
-function calcSum(arr: number[]): number {
-  return arr.reduce((prev, next) => prev + next);
+function testString(str: string): boolean {
+  if (str.length < 3) {
+    return false;
+  }
+
+  return /^[Los|New]/g.test(str)
 }
 
-console.log(calcSum([1, 5, 6]));
-console.log(calcSum([16, 1, 1]));
-console.log(calcSum([0, 0, 0]));
-console.log(calcSum([0, 2, 3]));
-console.log(calcSum([6, 1, 6]));
+console.log(testString("Losabcff"));
+console.log(testString("Newtovntv5nrhyrtew"));
+console.log(testString("ScrLosipttovntvNew5nrhyrtew"));
+console.log(testString("tNeweScriptst5"));
+console.log(testString("tLos"));
 
-// 12
-// 18
-// 0
-// 5
-// 13
+// true
+// true
+// false
+// false
+// false

@@ -1,19 +1,19 @@
 "use strict";
-// Write a JavaScript program to test whether a string end with "Script".
-// The string length must be greater or equal to 6
-function testString(str) {
-    if (str.length < 6) {
-        return false;
+// Write a JavaScript program to move last three character to the
+// start of a given string. The string length must be greater or equal to three
+function createNewString(str) {
+    if (str.length < 3) {
+        return str;
     }
-    return /Script$/g.test(str);
+    return str.slice(-3) + str.slice(0, -3);
 }
-console.log(testString("abcffScript"));
-console.log(testString("tovntv5nrhyrtew"));
-console.log(testString("Scripttovntv5nrhyrtew"));
-console.log(testString("teScriptst5"));
-console.log(testString("t65e4johb4Script53vest5"));
-// true
-// false
-// false
-// false
-// false
+console.log(createNewString('abcf'));
+console.log(createNewString('adc2'));
+console.log(createNewString('fetwmcotfft'));
+console.log(createNewString('tovntvnrhyrtew'));
+console.log(createNewString('test'));
+// bcfa
+// dc2a
+// fftfetwmcot
+// tewtovntvnrhyr
+// estt

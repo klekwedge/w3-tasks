@@ -1,22 +1,16 @@
-// Write a JavaScript program to check the total marks of
-// a student in various examinations. The student will
-// get A+ grade if the total marks are in the range
-// 89..100 inclusive, if the examination is "Final-exam."
-// the student will get A+ grade and total marks must be
-// greater than or equal to 90. Return true if the student
-// get A+ grade or false otherwise.
+// Write a program to check whether a specified character
+// exists within the 2nd to 4th position in a given string.
 
-function examStatus(totalMarks: number, isExam: boolean = false): boolean {
-  if (isExam) {
-    return totalMarks >= 90;
-  }
-  return totalMarks >= 89 && totalMarks <= 100;
+function findCharacter(str: string, char: string): boolean {
+  return str.slice(1, 4).includes(char);
 }
 
-console.log(examStatus(78));
-console.log(examStatus(89, true));
-console.log(examStatus(99, true));
+console.log(findCharacter('Hello', 'e'));
+console.log(findCharacter('Hello', 'l'));
+console.log(findCharacter('Hello', 'H'));
+console.log(findCharacter('Hello', 'o'));
 
-// false
-// false
 // true
+// true
+// false
+// false
