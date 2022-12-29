@@ -1,23 +1,22 @@
-// Write a JavaScript program to create a new string
-// from a given string taking the last 3 characters and
-// added at both the front and back. The string length
-// must be 3 or more.
+// Write a JavaScript program to create a new string from a
+// given string changing the position of first and last
+// characters. The string length must be greater than or equal to 1.
 
-function createNewString(str: string): string {
-  if (str.length < 3) {
-    return str;
+function changePositionCharacters(str: string): string | null {
+  if (str.length <= 1) {
+    return null;
   }
 
-  const lastThreeChar = str.slice(-3);
-  return lastThreeChar + str + lastThreeChar;
+  const arr = str.split('');
+  [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+
+  return arr.join('');
 }
 
-console.log(createNewString('Hello'));
-console.log(createNewString('Nice'));
-console.log(createNewString('Good'));
-console.log(createNewString('Goodbye'));
+console.log(changePositionCharacters('Hello'));
+console.log(changePositionCharacters('Look'));
+console.log(changePositionCharacters('Python'));
 
-// lloHellollo
-// iceNiceice
-// oodGoodood
-// byeGoodbyebye
+// oellH
+// kooL
+// nythoP

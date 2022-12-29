@@ -1,28 +1,21 @@
-// Write a JavaScript program to replace every character in a given
-// string with the character following it in the alphabet.
+// Write a JavaScript program to check two given non-negative integers
+// that whether one of the number (not both) is multiple of 7 or 11.
 
-function replaceCharacter(str: string): string {
-  let res = '';
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === 'z') {
-      res += 'a';
-    } else if (str[i] === 'Z') {
-      res += 'A';
-    } else {
-      res += String.fromCharCode(1 + str[i].charCodeAt(0));
-    }
-  }
-  return res;
+function checkNums(a: number, b: number): boolean {
+  return (
+    ((a % 7 === 0 || a % 11 === 0) && !(b % 7 === 0 || b % 11 === 0)) ||
+    (!(a % 7 === 0 || a % 11 === 0) && (b % 7 === 0 || b % 11 === 0))
+  );
 }
 
-console.log(replaceCharacter('Hello World'));
-console.log(replaceCharacter('Goodbye'));
-console.log(replaceCharacter('Example'));
-console.log(replaceCharacter('Test'));
-console.log(replaceCharacter('ZzABC'));
+console.log(checkNums(15, 10));
+console.log(checkNums(11, 11));
+console.log(checkNums(7, 15));
+console.log(checkNums(11, 65));
+console.log(checkNums(24, 11));
 
-// Ifmmp!Xpsme
-// Hppeczf
-// Fybnqmf
-// Uftu
-// AaBCD
+// false
+// false
+// true
+// true
+// true

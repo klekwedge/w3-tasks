@@ -1,45 +1,29 @@
 "use strict";
-// Write a JavaScript program to check whether two arrays of
-// integers of same length are similar or not. The arrays
-// will be similar if one array can be obtained from another
-// array by swapping at most one pair of elements.
-function checkArrays(arr1, arr2) {
-    let permutation = [];
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i] !== arr2[i]) {
-            permutation.push(i);
+// Write a JavaScript to replace each character of a given string
+// by the next one in the English alphabet.  Go to the editor
+// Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+function replaceChars(str) {
+    let res = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "z") {
+            res += "a";
         }
-        if (permutation.length === 2) {
-            return permutation;
+        else if (str[i] === "Z") {
+            res += "A";
+        }
+        else {
+            res += String.fromCharCode(str[i].charCodeAt(0) + 1);
         }
     }
-    return [];
+    return res;
 }
-function checkObtain(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
-        return false;
-    }
-    let permutation = checkArrays(arr1, arr2);
-    if (permutation.length > 0) {
-        [arr1[permutation[0]], arr1[permutation[1]]] = [
-            arr1[permutation[1]],
-            arr1[permutation[0]],
-        ];
-        permutation = checkArrays(arr1, arr2);
-        if (permutation.length === 0) {
-            return true;
-        }
-        return false;
-    }
-    return true;
-}
-console.log(checkObtain([10, 20, 30], [10, 20, 30]));
-console.log(checkObtain([10, 20, 30], [30, 10, 20]));
-console.log(checkObtain([10, 20, 30, 40], [10, 30, 20, 40]));
-console.log(checkObtain([10, 55, 20, 30, 40], [11, 10, 30, 20, 40]));
-console.log(checkObtain([10, 25, 30, 40], [10, 35, 20, 40]));
-// true
-// false
-// true
-// false
-// false
+console.log(replaceChars("fvfwefx12q"));
+console.log(replaceChars("1423egfx3cx2q"));
+console.log(replaceChars("vfwq234x32efx12q"));
+console.log(replaceChars("fw321x1xefx12q"));
+console.log(replaceChars("abcdxyz"));
+// gwgxfgy23r
+// 2534fhgy4dy3r
+// wgxr345y43fgy23r
+// gx432y2yfgy23r
+// bcdeyza

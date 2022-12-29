@@ -1,25 +1,15 @@
 "use strict";
-// Write a JavaScript program to check whether three given numbers
-// are increasing in strict mode or in soft mode.  Go to the editor
-// Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
-function checkNums(a, b, c) {
-    if (c >= b && b >= a) {
-        return 'Strict mode';
-    }
-    else if (c >= b) {
-        return 'Soft mode';
-    }
-    return null;
+// Write a JavaScript program to compute the sum of the two given
+// integers, If the sum is in the range 50..80 return 65 other
+//wise return 80.
+function computeSum(a, b) {
+    return a + b >= 50 && a + b <= 80 ? 65 : 80;
 }
-console.log(checkNums(22, 22, 31));
-console.log(checkNums(24, 22, 31));
-console.log(checkNums(10, 15, 31));
-console.log(checkNums(7, 4, 4));
-console.log(checkNums(12, 4, 1));
-console.log(checkNums(9, 65, 343));
-// Strict mode
-// Soft mode
-// Strict mode
-// Soft mode
-// null
-// Strict mode
+console.log(computeSum(78, 5));
+console.log(computeSum(89, 21));
+console.log(computeSum(99, 3));
+console.log(computeSum(9, 65));
+// 80
+// 80
+// 80
+// 65

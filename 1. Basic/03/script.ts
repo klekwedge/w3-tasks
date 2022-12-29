@@ -1,15 +1,22 @@
-// Write a JavaScript program to find the area of a triangle
-// where lengths of the three of its sides are 5, 6, 7.
+// Write a JavaScript program to get the current date.
+// Expected Output :
+// mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
 
-function calcAreaTriangle(): void {
-  const a = 5;
-  const b = 6;
-  const c = 7;
-  const perimeter = (a + b + c) / 2;
-  const area = Math.sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c))
-  console.log(`Area: ${area}`)
+function getCurrentDate(): void {
+  const date = new Date();
+  let day: number | string = date.getDate();
+  day = day < 10 ? `0${day}` : day;
+
+  console.log(`Current date is ${day}-${date.getMonth() + 1}-${date.getFullYear()}`)
+  console.log(`Current date is ${day}/${date.getMonth() + 1}/${date.getFullYear()}`)
+
+  console.log(`Current date is ${date.getMonth() + 1}-${day}-${date.getFullYear()}`)
+  console.log(`Current date is ${date.getMonth() + 1}/${day}/${date.getFullYear()}`)
 }
 
-calcAreaTriangle();
+getCurrentDate();
 
-// Area: 14.696938456699069
+// Current date is 07-11-2022
+// Current date is 07/11/2022
+// Current date is 11-07-2022
+// Current date is 11/07/2022

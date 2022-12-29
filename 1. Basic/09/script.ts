@@ -1,15 +1,15 @@
-// Write a JavaScript program to calculate multiplication and division of two numbers
+// Write a JavaScript program to calculate days left until next Christmas.
 
-function multiplicationAndDivisonOfTwoNumbers(): void {
-  const a = 10;
-  const b = 12;
+function countDaysUntilChristmas(): void {
+  const currentYear = new Date();
+  const nextYear = new Date(currentYear.getFullYear() + 1, 0, 1);
 
-  console.log('Multiplication:', a * b);
-  console.log('Division:', a / b);
+  console.log(
+    Math.floor((+nextYear - +currentYear) / (1000 * 60 * 60 * 24)) +
+      ' days left until Christmas!'
+  );
 }
 
-multiplicationAndDivisonOfTwoNumbers();
+countDaysUntilChristmas();
 
-
-// Multiplication: 120
-// Division: 0.8333333333333334
+// 54 days left until Christmas!

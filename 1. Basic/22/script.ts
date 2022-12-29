@@ -1,19 +1,14 @@
-// Write a JavaScript program to check whether a given
-// positive number is a multiple of 3 or a multiple of 7.
+// Write a JavaScript program to remove a character at
+// the specified position of a given string and return the new string.
 
-function checkMultiple(num: number): boolean {
-  return num % 3 === 0 || num % 7 === 0;
+function removeCharacter(str: string, index: number): string {
+  return str.slice(0, index) + str.slice(index + 1);
 }
 
-console.log(checkMultiple(3));
-console.log(checkMultiple(123));
-console.log(checkMultiple(35));
-console.log(checkMultiple(1));
-console.log(checkMultiple(5));
+console.log(removeCharacter('test', 3));
+console.log(removeCharacter('Example', 5));
+console.log(removeCharacter('Python', 2));
 
-
-// true
-// true
-// true
-// false
-// false
+// tes
+// Exampe
+// Pyhon

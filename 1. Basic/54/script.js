@@ -1,16 +1,21 @@
 "use strict";
-// Write a JavaScript program to create a new string of
-// specified copies (positive number) of a given string.
-function copyString(str, repeatNum) {
-    return str.repeat(repeatNum);
+// Write a JavaScript program to count the number of vowels
+// in a given string.
+function convertLetters(str) {
+    let counter = 0;
+    str.replace(/[aeiou]/gi, (letter) => {
+        counter++;
+        return letter;
+    });
+    return counter;
 }
-console.log(copyString('gfcnngndmm', 5));
-console.log(copyString('adc', 3));
-console.log(copyString('fff', 4));
-console.log(copyString('opopo', 2));
-console.log(copyString('test', 5));
-// gfcnngndmmgfcnngndmmgfcnngndmmgfcnngndmmgfcnngndmm
-// adcadcadc
-// ffffffffffff
-// opopoopopo
-// testtesttesttesttest
+console.log(convertLetters('af21b'));
+console.log(convertLetters('fkvlclagaaacmcx'));
+console.log(convertLetters('vrlea---blwkrkwca---bmdmwcdw'));
+console.log(convertLetters('fkelwcafffbfvmevrm'));
+console.log(convertLetters('gkldlcmfkrd'));
+// 1
+// 4
+// 3
+// 3
+// 0

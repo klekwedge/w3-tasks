@@ -1,22 +1,16 @@
-// Write a JavaScript program to create a new string from a
-// given string changing the position of first and last
-// characters. The string length must be greater than or equal to 1.
+// Write a JavaScript program to check from two given integers,
+// whether one is positive and another one is negative
 
-function changePositionCharacters(str: string): string | null {
-  if (str.length <= 1) {
-    return null;
-  }
-
-  const arr = str.split('');
-  [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
-
-  return arr.join('');
+function checkNums(a: number, b: number): boolean {
+  return (a >= 0 && b < 0) || (a < 0 && b >= 0);
 }
 
-console.log(changePositionCharacters('Hello'));
-console.log(changePositionCharacters('Look'));
-console.log(changePositionCharacters('Python'));
+console.log(checkNums(-20, 1));
+console.log(checkNums(-1, 20));
+console.log(checkNums(-1, -2));
+console.log(checkNums(0, 0));
 
-// oellH
-// kooL
-// nythoP
+// true
+// true
+// false
+// false

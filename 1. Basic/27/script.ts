@@ -1,21 +1,15 @@
-// Write a JavaScript program to check whether a string "Script"
-// presents at 5th (index 4) position in a given string, if "Script"
-// presents in the string return the string without "Script" otherwise
-// return the original one.
+// Write a JavaScript program to check whether a string
+// starts with 'Java' and false otherwise.
 
-function checkStr(str: string): boolean {
-  return str.indexOf('Script') === 4
+function checkString(str: string): boolean {
+  return str.startsWith('Java');
 }
 
-console.log(checkStr('Script'));
-console.log(checkStr('21221Script234'));
-console.log(checkStr('Sc4531ri1pt'));
-console.log(checkStr('JavaScript'));
-console.log(checkStr('TypeScript'));
-console.log(checkStr('Type2Script'));
+console.log(checkString('Hello'));
+console.log(checkString('Java'));
+console.log(checkString('Java231'));
+console.log(checkString('1Java212121'));
 
-// false
-// false
 // false
 // true
 // true

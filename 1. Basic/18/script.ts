@@ -1,19 +1,16 @@
-// Write a JavaScript program to create a new string adding "Py"
-// in front of a given string. If the given string begins with
-// "Py" then return the original string.
+// Write a JavaScript program to check two given numbers
+// and return true if one of the number is 50 or if their sum is 50.
 
-function createNewString(str: string): string {
-  if (str.slice(0, 2) === 'Py') {
-    return str;
-  }
-
-  return 'Py' + str;
+function checkNums(a: number, b: number): boolean {
+  return a === 50 || b === 50 || a + b === 50;
 }
 
-console.log(createNewString('test'));
-console.log(createNewString('Example'));
-console.log(createNewString('Python'));
+console.log(checkNums(11, 2));
+console.log(checkNums(50, 2));
+console.log(checkNums(25, 25));
+console.log(checkNums(3, 50));
 
-// Pytest
-// PyExample
-// Python
+// false
+// true
+// true
+// true

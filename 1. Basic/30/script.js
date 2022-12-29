@@ -1,15 +1,20 @@
 "use strict";
-// Write a JavaScript program to check whether
-// two numbers are in range 40..60 or in the range 70..100 inclusive.
-function isNumbersInRange(a, b) {
-    return ((a >= 40 && a <= 60 && b >= 40 && b <= 60) ||
-        (a >= 70 && a <= 100 && b >= 70 && b <= 100));
+// Write a JavaScript program to check whether a string "Script"
+// presents at 5th (index 4) position in a given string, if "Script"
+// presents in the string return the string without "Script" otherwise
+// return the original one.
+function checkStr(str) {
+    return str.indexOf('Script') === 4;
 }
-console.log(isNumbersInRange(1, 6));
-console.log(isNumbersInRange(5341, 22));
-console.log(isNumbersInRange(1, 1));
-console.log(isNumbersInRange(100, 99));
+console.log(checkStr('Script'));
+console.log(checkStr('21221Script234'));
+console.log(checkStr('Sc4531ri1pt'));
+console.log(checkStr('JavaScript'));
+console.log(checkStr('TypeScript'));
+console.log(checkStr('Type2Script'));
 // false
 // false
 // false
 // true
+// true
+// false

@@ -1,15 +1,9 @@
-// Write a JavaScript program to compute the sum of the two
-// given integers. If the two values are same, then returns triple their sum.
+// Write a JavaScript exercise to get the extension of a filename.
 
-function getDifference(num: number): number {
-  if (num <= 19) {
-    return 19 - num;
-  }
-
-  return Math.abs(19 - num) * 3
+function getExtension(str: string): string | undefined {
+  return str.split('.').pop()
 }
 
-console.log(getDifference(20));
-console.log(getDifference(19));
-// 3
-// 0
+console.log(getExtension('script.js'));
+
+// js

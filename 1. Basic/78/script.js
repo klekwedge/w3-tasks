@@ -1,21 +1,19 @@
 "use strict";
-// Write a JavaScript program to add two digits of a
-// given positive integer of length two.
-function addTwoDigits(num) {
-    let res = 0;
-    while (num / 10 !== 0) {
-        res += num % 10;
-        num = Math.floor(num / 10);
+// Write a JavaScript program to test whether an array
+// of integers of length 2 does not contain 1 or a 3.
+function isArrNotContain(arr) {
+    if (arr.length < 1) {
+        return false;
     }
-    return res;
+    return !(arr.includes(1)) && !(arr.includes(3));
 }
-console.log(addTwoDigits(30));
-console.log(addTwoDigits(61));
-console.log(addTwoDigits(41));
-console.log(addTwoDigits(6));
-console.log(addTwoDigits(40));
-// 3
-// 7
-// 5
-// 6
-// 4
+console.log(isArrNotContain([1, 5, 6]));
+console.log(isArrNotContain([16, 6, 2]));
+console.log(isArrNotContain([4, 0, 5]));
+console.log(isArrNotContain([0, 2, 3]));
+console.log(isArrNotContain([6, 1, 6]));
+// false
+// true
+// true
+// false
+// false

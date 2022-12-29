@@ -1,17 +1,17 @@
-// Write a JavaScript program to convert a given number to hours and minutes.
+// Write a JavaScript program to reverse a given string
 
-function convertNumber(num: number): string {
-  return `Hours: ${Math.floor(num / 60)}, minutes: ${num % 60}`;
+function reverseStr(str: string): string {
+  return str.split('').reverse().join('');
 }
 
-console.log(convertNumber(100));
-console.log(convertNumber(3500));
-console.log(convertNumber(60));
-console.log(convertNumber(59));
-console.log(convertNumber(120));
+console.log(reverseStr('Hello World'));
+console.log(reverseStr('Goodbye'));
+console.log(reverseStr('Example'));
+console.log(reverseStr('Test'));
+console.log(reverseStr('Nice'));
 
-// Hours: 1, minutes: 40
-// Hours: 58, minutes: 20
-// Hours: 1, minutes: 0
-// Hours: 0, minutes: 59
-// Hours: 2, minutes: 0
+// dlroW olleH
+// eybdooG
+// elpmaxE
+// tseT
+// eciN

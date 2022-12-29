@@ -1,19 +1,11 @@
-// Write a JavaScript program to find 1st January is being a
-// Sunday between 2014 and 2050.
+// Write a JavaScript program to determine whether a given year
+// is a leap year in the Gregorian calendar
 
-function isBeginningOfYearSunday(): void {
-  for (let year = 2014; year <= 2050; year++) {
-    const date = new Date(year, 0, 1)
-    if (date.getDay() === 0) {
-      console.log(`Year ${year} is Sunday`);
-    }
-  }
+function isLeapYear(): void {
+  const year = new Date().getFullYear();
+  console.log((year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0));
 }
 
-isBeginningOfYearSunday();
+isLeapYear();
 
-// Year 2017 is Sunday
-// Year 2023 is Sunday
-// Year 2034 is Sunday
-// Year 2040 is Sunday
-// Year 2045 is Sunday
+// false

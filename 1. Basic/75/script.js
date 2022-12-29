@@ -1,19 +1,16 @@
 "use strict";
-// Write a JavaScript program to test whether an array
-// of integers of length 2 does not contain 1 or a 3.
-function isArrNotContain(arr) {
-    if (arr.length < 1) {
-        return false;
-    }
-    return !(arr.includes(1)) && !(arr.includes(3));
+// Write a JavaScript program to create a new array taking the
+// middle elements of the two arrays of integer and each length 3.
+function createNewArray(arr1, arr2) {
+    return [arr1[Math.floor(arr1.length / 2)], arr2[Math.floor(arr2.length / 2)]];
 }
-console.log(isArrNotContain([1, 5, 6]));
-console.log(isArrNotContain([16, 6, 2]));
-console.log(isArrNotContain([4, 0, 5]));
-console.log(isArrNotContain([0, 2, 3]));
-console.log(isArrNotContain([6, 1, 6]));
-// false
-// true
-// true
-// false
-// false
+console.log(createNewArray([1, 5, 6], [1, 0, 6]));
+console.log(createNewArray([16, 1, 3], [1, 95, 6]));
+console.log(createNewArray([1, 0, 1], [1, 7, 6]));
+console.log(createNewArray([0, 2, 3], [1, 4, 6]));
+console.log(createNewArray([6, 1, 6], [1, 2, 6]));
+// [ 5, 0 ]
+// [ 1, 95 ]
+// [ 0, 7 ]
+// [ 2, 4 ]
+// [ 1, 2 ]

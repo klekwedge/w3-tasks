@@ -1,19 +1,22 @@
-// Write a JavaScript program to test whether a given
-// array of integers contains 30 and 40 twice.
-// The array length should be 0, 1, or 2.
+// Write a JavaScript program to create a new array taking
+// the first and last elements from a given array of
+// integers and length must be greater or equal to 1.
 
-function isArrContain(arr: number[]): boolean {
-  return (arr[0] === 40 && arr[1] === 40) || (arr[0] === 30 && arr[1] === 30);
+function createNewArray(arr: number[]): number[] {
+  if (arr.length < 1) {
+    return [];
+  }
+  return [arr[0], arr[arr.length - 1]];
 }
 
-console.log(isArrContain([30, 30]));
-console.log(isArrContain([16, 6]));
-console.log(isArrContain([40, 40]));
-console.log(isArrContain([30, 40]));
-console.log(isArrContain([6, 1]));
+console.log(createNewArray([1, 5, 6]));
+console.log(createNewArray([16, 1, 3]));
+console.log(createNewArray([1, 0, 1]));
+console.log(createNewArray([0, 2, 3]));
+console.log(createNewArray([6, 1, 6]));
 
-// true
-// false
-// true
-// false
-// false
+// [ 1, 6 ]
+// [ 16, 3 ]
+// [ 1, 1 ]
+// [ 0, 3 ]
+// [ 6, 6 ]

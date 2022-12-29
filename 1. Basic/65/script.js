@@ -1,21 +1,19 @@
 "use strict";
-// Write a JavaScript program to create a new string using the first
-// and last n characters from a given sting. The string length must
-// be greater or equal to n.
-function testString(str, n = 2) {
-    if (str.length < n) {
-        return str;
+// Write a JavaScript program to test whether a string end with "Script".
+// The string length must be greater or equal to 6
+function testString(str) {
+    if (str.length < 6) {
+        return false;
     }
-    const newStr = str.slice(0, n) + str.slice(-n);
-    return newStr;
+    return /Script$/g.test(str);
 }
-console.log(testString("P12$$21!P"));
-console.log(testString("Newt"));
-console.log(testString("FF"));
-console.log(testString("P!PPP!P"));
-console.log(testString("P21121FcFF"));
-// P1!P
-// Newt
-// FFFF
-// P!!P
-// P2FF
+console.log(testString("abcffScript"));
+console.log(testString("tovntv5nrhyrtew"));
+console.log(testString("Scripttovntv5nrhyrtew"));
+console.log(testString("teScriptst5"));
+console.log(testString("t65e4johb4Script53vest5"));
+// true
+// false
+// false
+// false
+// false

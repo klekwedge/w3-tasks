@@ -1,18 +1,19 @@
-// Write a JavaScript program to check whether the characters a and
-// b are separated by exactly 3 places anywhere (at least once) in a given string.
+//  Write a JavaScript program to capitalize the first letter of each
+// word of a given string.
 
-function convertLetters(str: string): boolean {
-  return /a...b/.test(str) || /b...a/.test(str);
+function capitalizeFirstLetter(str: string): string {
+  const arr = str.split(' ');
+  return arr.map((item) => item[0].toUpperCase() + item.slice(1)).join(' ');
 }
 
-console.log(convertLetters('af21b'));
-console.log(convertLetters('fkvlclaggggggggbrorpdkmcmcx'));
-console.log(convertLetters('vrlea---blwkrkwca---bmdmwcdw'));
-console.log(convertLetters('fkelwcafffbfvmevrm'));
-console.log(convertLetters('gkldlcmfkrd'));
+console.log(capitalizeFirstLetter('hello world'));
+console.log(capitalizeFirstLetter('goodbye nice test example'));
+console.log(capitalizeFirstLetter('str str str'));
+console.log(capitalizeFirstLetter('LOOK'));
+console.log(capitalizeFirstLetter('test example test'));
 
-// true
-// false
-// true
-// true
-// false
+// Hello World
+// Goodbye Nice Test Example
+// Str Str Str
+// LOOK
+// Test Example Test

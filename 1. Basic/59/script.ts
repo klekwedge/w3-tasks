@@ -1,22 +1,22 @@
-// Write a JavaScript program to move last three character to the
-// start of a given string. The string length must be greater or equal to three
+// Write a JavaScript program to extract the first half
+// of a string of even length.
 
 function createNewString(str: string): string {
-  if (str.length < 3) {
-    return str;
+  if (str.length % 2 !== 0) {
+    return '';
   }
 
-  return str.slice(-3) + str.slice(0, -3);
+  return str.slice(0, str.length / 2);
 }
 
-console.log(createNewString('abcf'));
+console.log(createNewString('gfcnngndmm'));
 console.log(createNewString('adc2'));
-console.log(createNewString('fetwmcotfft'));
-console.log(createNewString('tovntvnrhyrtew'));
+console.log(createNewString('ffft'));
+console.log(createNewString('op6opo'));
 console.log(createNewString('test'));
 
-// bcfa
-// dc2a
-// fftfetwmcot
-// tewtovntvnrhyr
-// estt
+// gfcnn
+// ad
+// ff
+// op6
+// te

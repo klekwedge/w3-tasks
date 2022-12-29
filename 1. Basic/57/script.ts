@@ -1,18 +1,18 @@
-// Write a JavaScript program to create a new string without
-// the first and last character of a given string.
+// Write a JavaScript program to create a new string of
+// specified copies (positive number) of a given string.
 
-function createNewString(str: string): string {
-  return str.slice(1, str.length - 1);
+function copyString(str: string, repeatNum: number): string {
+  return str.repeat(repeatNum);
 }
 
-console.log(createNewString('gfcnngndmm'));
-console.log(createNewString('adc2'));
-console.log(createNewString('ffft'));
-console.log(createNewString('op6opo'));
-console.log(createNewString('test'));
+console.log(copyString('gfcnngndmm', 5));
+console.log(copyString('adc', 3));
+console.log(copyString('fff', 4));
+console.log(copyString('opopo', 2));
+console.log(copyString('test', 5));
 
-// fcnngndm
-// dc
-// ff
-// p6op
-// es
+// gfcnngndmmgfcnngndmmgfcnngndmmgfcnngndmmgfcnngndmm
+// adcadcadc
+// ffffffffffff
+// opopoopopo
+// testtesttesttesttest

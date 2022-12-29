@@ -1,20 +1,26 @@
-// Write a JavaScript program to check two given integer values and
-// return true if one of the number is 15 or if their sum or difference is 15.
+// Write a JavaScript program to check whether three given numbers
+// are increasing in strict mode or in soft mode.  Go to the editor
+// Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
 
-function checkNums(a: number, b: number): boolean {
-  return a === 15 || b === 15 || a + b === 15 || Math.abs(a - b) === 15;
+function checkNums(a: number, b: number, c: number): string | null {
+  if (c >= b && b >= a) {
+    return 'Strict mode';
+  } else if (c >= b) {
+    return 'Soft mode';
+  }
+  return null;
 }
 
-console.log(checkNums(15, 10));
-console.log(checkNums(24, 22));
-console.log(checkNums(30, 15));
-console.log(checkNums(24, 24));
-console.log(checkNums(7, 8));
-console.log(checkNums(12, 4));
+console.log(checkNums(22, 22, 31));
+console.log(checkNums(24, 22, 31));
+console.log(checkNums(10, 15, 31));
+console.log(checkNums(7, 4, 4));
+console.log(checkNums(12, 4, 1));
+console.log(checkNums(9, 65, 343));
 
-// true
-// false
-// true
-// false
-// true
-// false
+// Strict mode
+// Soft mode
+// Strict mode
+// Soft mode
+// null
+// Strict mode

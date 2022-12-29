@@ -1,32 +1,45 @@
-// Write a JavaScript program to switch case of the minimum possible number
-// of letters to make a given string written in the upper case or in
-// the lower case.
+// Write a JavaScript program to replace all the numbers
+// with a specified number of a given array of integers
 
-function switchCase(str: string): string {
-  let upper = 0;
-  let lower = 0;
+function replaceSomeElements(
+  arr: number[],
+  oldEl: number,
+  newEl: number
+): number[] {
+  for (let index = 0; index < arr.length; index++) {
+    const el = arr[index];
 
-  for (let i = 0; i < str.length; i++) {
-    const element = str[i];
-
-    if (element === element.toUpperCase()) {
-      upper++;
-    } else {
-      lower++;
+    if (el === oldEl) {
+      arr[index] = newEl;
     }
   }
-
-  return lower > upper ? str.toLowerCase() : str.toUpperCase();
+  return arr;
 }
 
-console.log(switchCase("AcACffcfffff"));
-console.log(switchCase("crwqwKrkek"));
-console.log(switchCase("AAAAAAAAAAAAAAAA"));
-console.log(switchCase("ffvfcrcecwecr"));
-console.log(switchCase("FFFFcccFFFCccccFFFFFF"));
+console.log(
+  replaceSomeElements([1, 2, 3, 2, 1, 2, 3, 3, 3, 2], 2, 99)
+);
+console.log(replaceSomeElements([1, 18, 2, 3, 18, 9, 1, 18, 4, 5], 18, 23));
+console.log(replaceSomeElements([13, 2, 3, 13, 13, 8, 9], 13, 1111));
+console.log(replaceSomeElements([100, 25, 25, 4.0, 25], 25, 999));
+console.log(replaceSomeElements([100, 25, 25, 100], 25, 4543));
 
-// acacffcfffff
-// crwqwkrkek
-// AAAAAAAAAAAAAAAA
-// ffvfcrcecwecr
-// FFFFCCCFFFCCCCCFFFFFF
+// [
+//   1, 99, 3, 99,  1,
+//  99,  3, 3,  3, 99
+// ]
+
+// [
+//  1, 23,  2, 3, 23,
+//  9,  1, 23, 4,  5
+// ]
+
+// [
+//  1111,    2, 3,
+//  1111, 1111, 8,
+//     9
+// ]
+
+// [ 100, 999, 999, 4, 999 ]
+
+// [ 100, 4543, 4543, 100 ]

@@ -1,19 +1,23 @@
-// Write a JavaScript program to check whether three given
-// integer values are in the range 50..99 (inclusive).
-// Return true if one or more of them are in the said range.
+// Write a JavaScript program to create a new string
+// from a given string taking the last 3 characters and
+// added at both the front and back. The string length
+// must be 3 or more.
 
-function isNumbersInRange(a: number, b: number, c: number): boolean {
-  return (a >= 50 && a <= 99) || (b >= 50 && b <= 99) || (c >= 50 && c <= 99);
+function createNewString(str: string): string {
+  if (str.length < 3) {
+    return str;
+  }
+
+  const lastThreeChar = str.slice(-3);
+  return lastThreeChar + str + lastThreeChar;
 }
 
-console.log(isNumbersInRange(55, 111, 1));
-console.log(isNumbersInRange(5312, 65, 55));
-console.log(isNumbersInRange(55, 55, 21214));
-console.log(isNumbersInRange(76, 99, 6543));
-console.log(isNumbersInRange(100, 2121, 222));
+console.log(createNewString('Hello'));
+console.log(createNewString('Nice'));
+console.log(createNewString('Good'));
+console.log(createNewString('Goodbye'));
 
-// true
-// true
-// true
-// true
-// false
+// lloHellollo
+// iceNiceice
+// oodGoodood
+// byeGoodbyebye

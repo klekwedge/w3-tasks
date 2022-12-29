@@ -1,22 +1,24 @@
-// Write a JavaScript program to check whether 1 appears in
-// first or last position of a given array of integers. The
-// array length must be greater or equal to 1.
+// Write a JavaScript program to create a new string using the first
+// and last n characters from a given sting. The string length must
+// be greater or equal to n.
 
-function checkEl(arr: number[]): boolean {
-  if (arr.length < 1) {
-    return false;
+function testString(str: string, n: number = 2): string {
+  if (str.length < n) {
+    return str;
   }
-  return arr[0] === 1 || arr[arr.length - 1] === 1;
+  const newStr = str.slice(0, n) + str.slice(-n);
+
+  return newStr;
 }
 
-console.log(checkEl([1, 5, 6]));
-console.log(checkEl([16, 1, 3]));
-console.log(checkEl([1, 0, 1]));
-console.log(checkEl([0, 2, 3]));
-console.log(checkEl([6, 1, 6]));
+console.log(testString("P12$$21!P"));
+console.log(testString("Newt"));
+console.log(testString("FF"));
+console.log(testString("P!PPP!P"));
+console.log(testString("P21121FcFF"));
 
-// true
-// false
-// true
-// false
-// false
+// P1!P
+// Newt
+// FFFF
+// P!!P
+// P2FF

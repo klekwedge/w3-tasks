@@ -1,27 +1,25 @@
-// Write a JavaScript program to find the types of a given angle.
+// Write a JavaScript to find the longest string from a given array of strings.
 
-function findTypesGivenAngle(angle: number): string {
-  if (angle === 90) {
-    return "Right angle";
-  } else if (angle === 180) {
-    return "Straight angle";
-  } else if (angle < 90 && angle > 0) {
-    return "Acute angle";
-  } else if (angle > 90 && angle < 180) {
-    return "Obtuse angle";
+function findLongestString(arr: string[]): string {
+  let max = 0;
+  let res = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (max < arr[i].length) {
+      max = arr[i].length;
+      res = arr[i];
+    }
   }
-
-  return 'Error'
+  return res;
 }
 
-console.log(findTypesGivenAngle(180));
-console.log(findTypesGivenAngle(90));
-console.log(findTypesGivenAngle(34));
-console.log(findTypesGivenAngle(98));
-console.log(findTypesGivenAngle(360));
+console.log(findLongestString(["12", "215212", "fvfwefx12q"]));
+console.log(findLongestString(["1423egfx3cx2", "215212", "fvfwefx12q"]));
+console.log(findLongestString(["12", "2153xe2 e212", "fvfwq234x32efx12q"]));
+console.log(findLongestString(["12", "2123c x23x5212", "fvfw321x1xefx12q"]));
+console.log(findLongestString(["12", "21x32x35212", "fvfwefx12q"]));
 
-// Straight angle
-// Right angle
-// Acute angle
-// Obtuse angle
-// Error
+// fvfwefx12q
+// 1423egfx3cx2
+// fvfwq234x32efx12q
+// fvfw321x1xefx12q
+// 21x32x35212

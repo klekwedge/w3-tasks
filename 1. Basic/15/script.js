@@ -1,14 +1,14 @@
 "use strict";
-// Write a JavaScript program to check two given numbers
-// and return true if one of the number is 50 or if their sum is 50.
-function checkNums(a, b) {
-    return a === 50 || b === 50 || a + b === 50;
+// Write a JavaScript program to get the difference between a
+// given number and 13, if the number is greater than 13
+// return double the absolute difference.
+function getDifference(num) {
+    if (num <= 13) {
+        return 13 - num;
+    }
+    return Math.abs(13 - num) * 2;
 }
-console.log(checkNums(11, 2));
-console.log(checkNums(50, 2));
-console.log(checkNums(25, 25));
-console.log(checkNums(3, 50));
-// false
-// true
-// true
-// true
+console.log(getDifference(431));
+console.log(getDifference(11));
+// 836
+// 2

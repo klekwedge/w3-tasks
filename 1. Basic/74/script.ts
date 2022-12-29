@@ -1,21 +1,23 @@
-//  Write a JavaScript program to test whether an array of integers
-// of length 2 contains 1 or a 3.
+// Write a JavaScript program to find the larger value between
+// the first or last and set all the other elements with
+// that value. Display the new array.
 
-function isArrContain(arr: number[]): boolean {
+function fillArray(arr: number[]): number[] {
   if (arr.length < 1) {
-    return false;
+    return [];
   }
-  return arr.includes(1) || arr.includes(3);
+  const max = arr[0] > arr[arr.length - 1] ? arr[0] : arr[arr.length - 1];
+  return arr.fill(max);
 }
 
-console.log(isArrContain([1, 5, 6]));
-console.log(isArrContain([16, 6, 2]));
-console.log(isArrContain([4, 0, 5]));
-console.log(isArrContain([0, 2, 3]));
-console.log(isArrContain([6, 1, 6]));
+console.log(fillArray([1, 5, 6]));
+console.log(fillArray([16, 1, 3]));
+console.log(fillArray([1, 0, 1]));
+console.log(fillArray([0, 2, 3]));
+console.log(fillArray([6, 1, 6]));
 
-// true
-// false
-// false
-// true
-// true
+// [ 6, 6, 6 ]
+// [ 16, 16, 16 ]
+// [ 1, 1, 1 ]
+// [ 3, 3, 3 ]
+// [ 6, 6, 6 ]

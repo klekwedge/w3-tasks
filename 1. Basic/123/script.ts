@@ -1,20 +1,26 @@
-// Write a JavaScript program to create the value of NOR of two given booleans.
-// Note: In boolean logic, logical nor or joint denial is a truth-functional
-// operator which produces a result that is the negation of logical or.
-// That is, a sentence of the form (p NOR q) is true precisely when neither
-// p nor q is true - i.e. when both of p and q are false
-// Sample Example:
-// For x = true and y = false, the output should be logical_Nor(x, y) = false;
-// For x = false and y = false, the output should be logical_Nor(x, y) = true
+// Write a JavaScript program to find whether the members of a given
+// array of integers is a permutation of numbers from 1 to a given integer.
 
-function testLogicalNor(a: boolean, b: boolean) {
-  return (!a && !b)
+function isPermutation(arr: number[], num: number) {
+  let count = 1;
+  for (let i = 0; i < arr.length; i++) {
+    if (count > num) {
+      break;
+    }
+
+    const element = arr[i];
+    if (count !== element) {
+      return false;
+    }
+    count++;
+  }
+  return true;
 }
 
-console.log(testLogicalNor(true, false));
-console.log(testLogicalNor(false, false));
-console.log(testLogicalNor(true, true));
+console.log(isPermutation([1, 2, 3, 4, 5], 5));
+console.log(isPermutation([1, 2, 3, 5], 5));
+console.log(isPermutation([1, 2, 3], 3));
 
-// false
 // true
 // false
+// true

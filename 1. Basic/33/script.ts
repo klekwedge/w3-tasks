@@ -1,18 +1,19 @@
-// Write a JavaScript program to check whether the last digit
-// of the three given positive integers is same.
+// Write a JavaScript program to check whether
+// two numbers are in range 40..60 or in the range 70..100 inclusive.
 
-function checkLastDigit(a: number, b: number, c: number): boolean {
-  return a % 10 == b % 10 && a % 10 == c % 10 && b % 10 == c % 10;
+function isNumbersInRange(a: number, b: number): boolean {
+  return (
+    (a >= 40 && a <= 60 && b >= 40 && b <= 60) ||
+    (a >= 70 && a <= 100 && b >= 70 && b <= 100)
+  );
 }
 
-console.log(checkLastDigit(123, 123, 3));
-console.log(checkLastDigit(123, 121, 1));
-console.log(checkLastDigit(2123, 123, 3));
-console.log(checkLastDigit(22, 22, 444424122));
-console.log(checkLastDigit(5213422, 422, 654357652));
+console.log(isNumbersInRange(1, 6));
+console.log(isNumbersInRange(5341, 22));
+console.log(isNumbersInRange(1, 1));
+console.log(isNumbersInRange(100, 99));
 
-// true
 // false
-// true
-// true
+// false
+// false
 // true

@@ -1,25 +1,18 @@
-// Write a JavaScript program to create a string using the middle three
-// characters of a given string of odd length. The string length
-// must be greater or equal to three.
+// Write a JavaScript program to create a new string without
+// the first and last character of a given string.
 
 function createNewString(str: string): string {
-  if (str.length < 3 || str.length % 2 === 0) {
-    return str;
-  }
-
-  const middle = Math.floor(str.length / 2);
-
-  return str.slice(middle - 1, middle + 2);
+  return str.slice(1, str.length - 1);
 }
 
-console.log(createNewString('abcff'));
-console.log(createNewString('adc2c'));
-console.log(createNewString('fetwmcotfft'));
-console.log(createNewString('tovntv5nrhyrtew'));
-console.log(createNewString('test5'));
+console.log(createNewString('gfcnngndmm'));
+console.log(createNewString('adc2'));
+console.log(createNewString('ffft'));
+console.log(createNewString('op6opo'));
+console.log(createNewString('test'));
 
-// bcf
-// dc2
-// mco
-// 5nr
-// est
+// fcnngndm
+// dc
+// ff
+// p6op
+// es

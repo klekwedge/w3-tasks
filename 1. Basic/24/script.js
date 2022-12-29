@@ -1,14 +1,13 @@
 "use strict";
-// Write a JavaScript program to check whether a string
-// starts with 'Java' and false otherwise.
-function checkString(str) {
-    return str.startsWith('Java');
+// Write a JavaScript program to create a new string from a given
+// string with the first character of the given string added at the front and back.
+function createNewString(str) {
+    const firstLetter = str[0];
+    return firstLetter + str + firstLetter;
 }
-console.log(checkString('Hello'));
-console.log(checkString('Java'));
-console.log(checkString('Java231'));
-console.log(checkString('1Java212121'));
-// false
-// true
-// true
-// false
+console.log(createNewString('Hello'));
+console.log(createNewString('Look'));
+console.log(createNewString('Python'));
+// HHelloH
+// LLookL
+// PPythonP

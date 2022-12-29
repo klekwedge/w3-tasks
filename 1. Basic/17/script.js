@@ -1,14 +1,13 @@
 "use strict";
-// Write a JavaScript program to check from two given integers,
-// whether one is positive and another one is negative
-function checkNums(a, b) {
-    return (a >= 0 && b < 0) || (a < 0 && b >= 0);
+// Write a JavaScript program to compute the sum of the two
+// given integers. If the two values are same, then returns triple their sum.
+function getDifference(num) {
+    if (num <= 19) {
+        return 19 - num;
+    }
+    return Math.abs(19 - num) * 3;
 }
-console.log(checkNums(-20, 1));
-console.log(checkNums(-1, 20));
-console.log(checkNums(-1, -2));
-console.log(checkNums(0, 0));
-// true
-// true
-// false
-// false
+console.log(getDifference(20));
+console.log(getDifference(19));
+// 54
+// 0

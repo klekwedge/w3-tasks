@@ -1,16 +1,16 @@
-// Write a JavaScript program to check whether a string
-// starts with 'Java' and false otherwise.
+// Write a JavaScript program to create a new string from a given
+// string with the first character of the given string added at the front and back.
 
-function checkString(str: string): boolean {
-  return str.startsWith('Java');
+function createNewString(str: string): string {
+  const firstLetter = str[0];
+
+  return firstLetter + str + firstLetter;
 }
 
-console.log(checkString('Hello'));
-console.log(checkString('Java'));
-console.log(checkString('Java231'));
-console.log(checkString('1Java212121'));
+console.log(createNewString('Hello'));
+console.log(createNewString('Look'));
+console.log(createNewString('Python'));
 
-// false
-// true
-// true
-// false
+// HHelloH
+// LLookL
+// PPythonP

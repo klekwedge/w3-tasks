@@ -1,16 +1,19 @@
-// Write a JavaScript program to find a value which is nearest
-// to 100 from two different given integer values.
+// Write a JavaScript program to check whether three given
+// integer values are in the range 50..99 (inclusive).
+// Return true if one or more of them are in the said range.
 
-function findNearestValue(a: number, b: number): number {
-  return Math.abs(100 - a) > Math.abs(100 - b) ? b : a;
+function isNumbersInRange(a: number, b: number, c: number): boolean {
+  return (a >= 50 && a <= 99) || (b >= 50 && b <= 99) || (c >= 50 && c <= 99);
 }
 
-console.log(findNearestValue(1, 6));
-console.log(findNearestValue(5341, 22));
-console.log(findNearestValue(1, 1));
-console.log(findNearestValue(100, 99));
+console.log(isNumbersInRange(55, 111, 1));
+console.log(isNumbersInRange(5312, 65, 55));
+console.log(isNumbersInRange(55, 55, 21214));
+console.log(isNumbersInRange(76, 99, 6543));
+console.log(isNumbersInRange(100, 2121, 222));
 
-// 6
-// 22
-// 1
-// 100
+// true
+// true
+// true
+// true
+// false

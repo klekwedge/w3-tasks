@@ -1,31 +1,25 @@
-// Write a JavaScript code to divide a given array
-// of positive integers into two parts. First element
-// goes to first part, second element goes to second
-// part, and third element goes to first part and soon.
-// Now compute the sum of two parts and store into an array of size two
+// Write a JavaScript to add two positive integers without carry.
 
-function divideGivenArray(arr: number[]): number[] {
-  const arr1 = [];
-  const arr2 = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    i % 2 === 0 ? arr1.push(arr[i]) : arr2.push(arr[i]);
+function addTwoIntegersWithoutCarry(a: number, b: number): number {
+  let res = 0;
+  let count = 1;
+  while (a / 10 !== 0 && b / 10 !== 0) {
+    res += count * (((a % 10) + (b % 10)) % 10);
+    a = Math.floor(a / 10);
+    b = Math.floor(b / 10);
+    count *= 10;
   }
-
-  return [
-    arr1.reduce((prev, next) => prev + next),
-    arr2.reduce((prev, next) => prev + next),
-  ];
+  return res;
 }
 
-console.log(divideGivenArray([1, 5, 1, 10]));
-console.log(divideGivenArray([13, 365, 6, 212, 5, 10]));
-console.log(divideGivenArray([1, 53, 6, 23, 5, 10]));
-console.log(divideGivenArray([1, 34, 6, 2, 52, 10]));
-console.log(divideGivenArray([51, 31, 65, 2, 5, 160]));
+console.log(addTwoIntegersWithoutCarry(222, 911));
+console.log(addTwoIntegersWithoutCarry(200, 900));
+console.log(addTwoIntegersWithoutCarry(413, 111));
+console.log(addTwoIntegersWithoutCarry(632, 241));
+console.log(addTwoIntegersWithoutCarry(421, 425));
 
-// [ 2, 15 ]
-// [ 24, 587 ]
-// [ 12, 86 ]
-// [ 59, 46 ]
-// [ 121, 193 ]
+// 133
+// 100
+// 524
+// 873
+// 846

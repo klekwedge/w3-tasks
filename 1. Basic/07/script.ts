@@ -1,22 +1,19 @@
-// Write a JavaScript program where the program takes a random
-// integer between 1 to 10, the user is then prompted to input a
-// guess number. If the user input matches with guess number,
-// the program will display a message "Good Work" otherwise display a
-// message "Not matched".
+// Write a JavaScript program to find 1st January is being a
+// Sunday between 2014 and 2050.
 
-function isRandomNumbersMatch(): void {
-  const randomNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-  const randomUserNum = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-  console.log(`randomNum: ${randomNum}`, `randomUserNum: ${randomUserNum}`);
-  if (randomNum === randomUserNum) {
-    console.log("Good Work");
-  }
-  else {
-    console.log("Not matched");
+function isBeginningOfYearSunday(): void {
+  for (let year = 2014; year <= 2050; year++) {
+    const date = new Date(year, 0, 1)
+    if (date.getDay() === 0) {
+      console.log(`Year ${year} is Sunday`);
+    }
   }
 }
 
-isRandomNumbersMatch();
+isBeginningOfYearSunday();
 
-// randomNum: 9 randomUserNum: 4
-// Not matched
+// Year 2017 is Sunday
+// Year 2023 is Sunday
+// Year 2034 is Sunday
+// Year 2040 is Sunday
+// Year 2045 is Sunday

@@ -1,15 +1,13 @@
 "use strict";
-// Write a JavaScript program to rotate the string 'w3resource'
-// in right direction by periodically removing one letter from
-// the end of the string and attaching it to the front.
-function rotateStr() {
-    const str = 'w3resource';
-    let strArr = str.split('');
-    let res = '';
-    for (let i = 0; i < str.length; i++) {
-        res += strArr.pop();
-    }
-    console.log(`Res: ${res}`);
+// Write a JavaScript program to find the area of a triangle
+// where lengths of the three of its sides are 5, 6, 7.
+function calcAreaTriangle() {
+    const a = 5;
+    const b = 6;
+    const c = 7;
+    const perimeter = (a + b + c) / 2;
+    const area = Math.sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c));
+    console.log(`Area: ${area}`);
 }
-rotateStr();
-// Res: ecruoser3w
+calcAreaTriangle();
+// Area: 14.696938456699069

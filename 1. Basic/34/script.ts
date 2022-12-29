@@ -1,24 +1,23 @@
-// Write a JavaScript program to create new string with
-// first 3 characters are in lower case from a given string.
-// If the string length is less than 3 convert all the characters
-// in upper case.
+// Write a JavaScript program to find the larger number
+// from the two given positive integers, the two numbers
+// are in the range 40..60 inclusive.
 
-function createNewString(str: string): string {
-  if(str.length < 3){
-    return str.toUpperCase();
+function findLargerNumber(a: number, b: number): number | null {
+  if (a >= 40 && a <= 60 && b >= 40 && b <= 60) {
+    return a > b ? a : b;
+  } else {
+    return null;
   }
-
-  return str.slice(0, 3).toLowerCase() + str.slice(3)
 }
 
-console.log(createNewString('Hello'));
-console.log(createNewString('HELLLLOO'));
-console.log(createNewString('he'));
-console.log(createNewString('Wo'));
-console.log(createNewString('WORLD'));
+console.log(findLargerNumber(1, 6));
+console.log(findLargerNumber(5341, 22));
+console.log(findLargerNumber(1, 1));
+console.log(findLargerNumber(100, 99));
+console.log(findLargerNumber(44, 55));
 
-// hello
-// helLLLOO
-// HE
-// WO
-// worLD
+// null
+// null
+// null
+// null
+// 55

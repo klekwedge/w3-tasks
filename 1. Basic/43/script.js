@@ -1,18 +1,19 @@
 "use strict";
-// Write a JavaScript program to check two given non-negative integers
-// that whether one of the number (not both) is multiple of 7 or 11.
-function checkNums(a, b) {
-    return (((a % 7 === 0 || a % 11 === 0) && !(b % 7 === 0 || b % 11 === 0)) ||
-        (!(a % 7 === 0 || a % 11 === 0) && (b % 7 === 0 || b % 11 === 0)));
+// Write a JavaScript program to check from three given numbers
+// (non negative integers) that two or all of them have the
+// same rightmost digit.
+function checkNums(a, b, c) {
+    return a % 10 === b % 10 || a % 10 === c % 10 || b % 10 === c % 10;
 }
-console.log(checkNums(15, 10));
-console.log(checkNums(11, 11));
-console.log(checkNums(7, 15));
-console.log(checkNums(11, 65));
-console.log(checkNums(24, 11));
+console.log(checkNums(22, 22, 31));
+console.log(checkNums(24, 22, 31));
+console.log(checkNums(10, 15, 31));
+console.log(checkNums(24, 24, 24));
+console.log(checkNums(7, 4, 4));
+console.log(checkNums(12, 4, 1));
 // true
 // false
-// true
 // false
+// true
 // true
 // false
