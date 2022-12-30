@@ -1,8 +1,26 @@
 // Write a JavaScript conditional statement to sort three numbers.
 // Display an alert box to show the result.
 
-function sort(a: number, b: number, c: number) {
-  return [a, b, c].sort((a, b) => b - a);
+function sort(x: number, y: number, z: number) {
+  if (x >= y && x >= z) {
+    if (y >= z) {
+      return [x, y, z];
+    } else {
+      return [x, z, y];
+    }
+  } else if (y >= x && y >= z) {
+    if (x >= z) {
+      return [y, x, z];
+    } else {
+      return [y, z, x];
+    }
+  } else if (z >= x && z >= y) {
+    if (x >= y) {
+      return [z, x, y];
+    } else {
+      return [z, y, x];
+    }
+  }
 }
 
 console.log(sort(30, 40, -10));
