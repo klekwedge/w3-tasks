@@ -1,4 +1,4 @@
-// Write a JavaScript function to generate a random integer.
+// Write a JavaScript function to generate a random integer
 // Test Data :
 // console.log(rand(20,1));
 // console.log(rand(1,10));
