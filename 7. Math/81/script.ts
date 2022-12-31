@@ -1,5 +1,10 @@
-// Write a JavaScript program to given two non-negative integers num1
-// and num2 represented as string, return the sum of num1 and num2.
+// Write a JavaScript program to multiply every digit of a number three times.
+// Test Data:
+// (11) -> 11
+// (66) -> 216216
+// (336) -> 2727216
+// (444) -> 646464
+// (1151) -> 111251
 
 function test(num: number) {
   return String(num)
