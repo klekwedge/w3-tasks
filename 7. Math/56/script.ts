@@ -1,0 +1,15 @@
+// Write a JavaScript program to calculate the volume of a Cuboid.
+
+function volCuboid(width: number, length: number, height: number) {
+  if (width < 0 || length < 0 || height < 0) {
+    return null;
+  }
+
+  return width * length * height;
+}
+
+console.log(volCuboid(3.0, 2.0, 4.0));
+console.log(volCuboid(3.0, -2.0, 4.0));
+
+// 24
+// null
