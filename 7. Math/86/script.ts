@@ -1,4 +1,5 @@
-// Write a JavaScript program to get the middle character(s) from a given string.
+// Write a JavaScript program to get the middle character(s) from a
+// given string.
 // Test Data:
 // ("abcd") -> "bc"
 // ("abc") -> "b"
