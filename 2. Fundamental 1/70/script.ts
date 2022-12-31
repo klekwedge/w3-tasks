@@ -1,4 +1,4 @@
-// Write a JavaScript program to cast the provided value as an array if it's not one.
+// Write a JavaScript program to count the occurrences of a value in an array.
 
 const countOccurrences = (arr: number[], num: number) =>
   arr.filter((item) => item === num).length;

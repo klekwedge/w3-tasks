@@ -1,5 +1,5 @@
 "use strict";
-// Write a JavaScript program to cast the provided value as an array if it's not one.
+// Write a JavaScript program to count the occurrences of a value in an array.
 const countOccurrences = (arr, num) => arr.filter((item) => item === num).length;
 console.log(countOccurrences([1, 1, 2, 1, 2, 3], 1));
 console.log(countOccurrences([1, 1, 2, 1, 2, 3], 2));
